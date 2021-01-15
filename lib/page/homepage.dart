@@ -28,12 +28,19 @@ class _HomePageState extends State<HomePage> {
           textval,
           style: GoogleFonts.montserrat(
             textStyle: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontWeight: FontWeight.w600,
-              fontSize: 15.0,
+              fontSize: 32.0,
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.mic_none,
+          size: 36,
+        ),
+        onPressed: () {},
       ),
     );
   }

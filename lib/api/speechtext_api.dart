@@ -5,7 +5,7 @@ class SpeechToText {
   static final _speech = SpeechToText();
 
   static Future<bool> toggleRecording({
-    @required Function(String t ext) onResult,
+    @required Function(String text) onResult,
     @required ValueChanged<bool> onListening,
   }) async {
     if (_speech.isListening) {
