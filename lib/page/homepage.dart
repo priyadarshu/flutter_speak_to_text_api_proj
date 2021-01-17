@@ -43,12 +43,12 @@ class _HomePageState extends State<HomePage> {
             terms: Command.all,
             textStyle: TextStyle(
               fontSize: 32.0,
-              color: Colors.black,
+              color: Colors.grey,
               fontWeight: FontWeight.w400,
             ),
             textStyleHighlight: TextStyle(
               fontSize: 32.0,
-              color: Colors.red,
+              color: Colors.cyan,
               fontWeight: FontWeight.w400,
             ),
           ),
