@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
-class SpeechToText {
+class SpeechApi {
   static final _speech = SpeechToText();
 
   static Future<bool> toggleRecording({
@@ -12,6 +12,7 @@ class SpeechToText {
       _speech.stop();
       return true;
     }
+
     final isAvailable = await _speech.initialize(
       onStatus: (status) => onListening(_speech.isListening),
       onError: (e) => print('Error: $e'),
@@ -20,6 +21,7 @@ class SpeechToText {
     if (isAvailable) {
       _speech.listen(onResult: (value) => onResult(value.recognizedWords));
     }
+
     return isAvailable;
   }
 }
